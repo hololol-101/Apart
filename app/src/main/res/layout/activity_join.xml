@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="604dp"
+        android:layout_height="67dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002" />
+
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원 가입"
+            android:fontFamily="@font/tmon"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cancel_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="45dp"
+        android:layout_height="67dp"
+        android:background="@drawable/ic_backspace"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="완료"
+        android:fontFamily="@font/spoqabold"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/join_button"
+        style="@style/defaultButton"
+        android:layout_width="70dp"
+        android:layout_height="67dp"
+        android:background="@drawable/non_edittext"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/textview"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="40dp"
+                android:text="아이디"
+                android:textColor="#1f1f1f"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/join_id"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/lin_id"
+                android:layout_width="345dp"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/join_id"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="5~20자의 영문 소문자 + 숫자"
+                    android:textSize="16dp"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:background="@drawable/line_edittext"
+                    app:layout_constraintBottom_toTopOf="@+id/join_password"
+                    app:layout_constraintLeft_toLeftOf="@+id/join_name" />
+
+                <Button
+                    android:id="@+id/check_button"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="중복확인"
+                    android:textColor="@color/white"
+                    android:background="@drawable/ic_default_square"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/join_id" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/id_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#FF0000"
+                tools:text="id_error" />
+
+            <TextView
+                android:id="@+id/pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="3dp"
+                android:text="비밀번호"
+                android:textColor="#1f1f1f"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/join_password"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <EditText
+                android:id="@+id/join_password"
+                android:layout_width="335dp"
+                android:layout_height="50dp"
+                android:background="@drawable/line_edittext"
+                android:ems="10"
+                android:hint="6~16자의 영문+숫자 조합(대/소문자 구분)"
+                android:textSize="16dp"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:maxLines="1"
+                app:layout_constraintBottom_toTopOf="@+id/join_pwck"
+                app:layout_constraintStart_toStartOf="@+id/join_id" />
+
+            <TextView
+                android:id="@+id/pw_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#FF0000"
+                tools:text="pw_error" />
+
+
+            <TextView
+                android:id="@+id/pwck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="3dp"
+                android:text="비밀번호 확인"
+                android:textColor="#1f1f1f"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/join_pwck"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <EditText
+                android:id="@+id/join_pwck"
+                android:layout_width="335dp"
+                android:layout_height="50dp"
+                android:background="@drawable/line_edittext"
+                android:ems="10"
+                android:hint="비밀번호 재입력"
+                android:textSize="16dp"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:maxLines="1"
+                app:layout_constraintBottom_toTopOf="@+id/join_email"
+                app:layout_constraintStart_toStartOf="@+id/join_password" />
+
+            <TextView
+                android:id="@+id/pwck_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#FF0000"
+                tools:text="pwck_error" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="3dp"
+                android:text="이메일"
+                android:textColor="#1f1f1f"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/join_email"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/lin_email"
+            android:layout_width="335dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/join_email"
+                    android:layout_width="240dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/line_edittext"
+                    android:ems="10"
+                    android:textSize="16dp"
+                    android:hint="이메일 입력"
+                    android:maxLength="20"
+                    android:maxLines="1">
+                </EditText>
+
+                <Button
+                    android:id="@+id/send_ecode_button"
+                    android:layout_width="84dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="11dp"
+                    android:background = "@drawable/ic_default_square"
+                    android:text="인증번호전송"
+                    android:textColor="@color/white"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/join_email"/>
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/email_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FF0000"
+                tools:text="email_error" />
+
+
+            <LinearLayout
+                android:layout_width="335dp"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="240dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/line_edittext">
+                    <EditText
+                        android:id="@+id/join_input_authcode"
+                        android:layout_width="142dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/non_edittext"
+                        android:hint="인증번호"
+                        android:textSize="16dp"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/eauth_counter"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:text=""
+                        android:gravity="center_horizontal"
+                        android:textSize="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/join_eauthcode_button"
+                    android:layout_width="84dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="11dp"
+                    android:background="@drawable/ic_default_square"
+                    android:text="인증번호확인"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/testtest"
+                android:layout_marginTop="300dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="604dp"
+        android:layout_height="67dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002" />
+
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_detail_apart_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아파트 검색"
+            android:fontFamily="@font/tmon"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rank_back"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="45dp"
+        android:layout_height="67dp"
+        android:background="@drawable/ic_backspace"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OO"
+        android:fontFamily="@font/spoqabold"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/search_button"
+        style="@style/defaultButton"
+        android:layout_width="70dp"
+        android:layout_height="67dp"
+        android:background="@drawable/non_edittext"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textvieww2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/line_drawer"
+        app:layout_constraintTop_toBottomOf="@id/textview"></TextView>
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        sothree:layout_constraintTop_toBottomOf="@+id/textvieww2"
+        sothree:umanoPanelHeight="0dp"
+        sothree:umanoShadowHeight="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="qweqwe"></TextView>
+            <ListView
+                android:id="@+id/lv_search_list"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                />
+        </LinearLayout>
+
+
+        <!-- 슬라이드 레이어 부분 -->
+
+
+        <LinearLayout
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="지역 설정" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시/도" />
+
+                    <Button
+                        android:id="@+id/btn_search_si_do_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_drop_up_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/NP_sido"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btn_search_si_do_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시/구/군" />
+
+                    <Button
+                        android:id="@+id/btn_search_si_gu_gun_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_drop_up_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/NP_sigugun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btn_search_si_gu_gun_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="읍/면/동" />
+
+                    <Button
+                        android:id="@+id/btn_search_eup_dong_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_drop_up_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/NP_eupdong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btn_search_eup_dong_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="가격대 설정" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="최소값:" />
+
+                <EditText
+                    android:id="@+id/et_search_min_price"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text=" 만원   -   최대값:" />
+
+                <EditText
+                    android:id="@+id/ev_search_max_price"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text=" 만원" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="면적 설정" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="최소 면적:" />
+
+                <EditText
+                    android:id="@+id/et_search_min_area"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text=" m2 - 최대 면적:" />
+
+                <EditText
+                    android:id="@+id/ev_search_max_area"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text=" m2" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="지역 설정" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1,2,3">
+
+                <TableRow android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_search_bus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="버스정류징" />
+
+                    <CheckBox
+                        android:id="@+id/cb_search_subway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="지하철역" />
+
+                    <CheckBox
+                        android:id="@+id/cb_search_nursery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="어린이집" />
+
+                    <CheckBox
+                        android:id="@+id/cb_search_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="은행" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb_search_preschool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="유치원" />
+
+                    <CheckBox
+                        android:id="@+id/cb_search_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="학교" />
+
+                    <CheckBox
+                        android:id="@+id/cb_search_parking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주차장" />
+
+                    <CheckBox
+                        android:id="@+id/cb_search_market"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="마트" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb_search_convinience_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="편의점" />
+
+                    <CheckBox
+                        android:id="@+id/cb_search_laundry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="세탁소" />
+
+                    <CheckBox
+                        android:id="@+id/cb_search_hospital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="병원" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

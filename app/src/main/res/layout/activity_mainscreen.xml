@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen.drawActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center_horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/liny1"
+                android:layout_width="match_parent"
+                android:layout_height="397dp"
+                android:background="#2196F3"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintVertical_bias="0.025"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="220dp"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/city3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/menu_button"></TextView>
+
+
+
+
+            <TextView
+                android:id="@+id/qosj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/menu_button"
+                android:text="대구 아파트"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/gongmid"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/qosj"
+                android:text="실거래가 / 시세분석 / \n부동산비교"
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/gonglight"
+                ></TextView>
+
+
+
+            <TextView
+                android:id="@+id/mapback"
+                android:layout_width="180dp"
+                android:layout_height="90dp"
+                android:background="@drawable/search"
+                android:layout_marginTop="275dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="25.5dp"
+                ></TextView>
+
+            <Button
+                android:id="@+id/search_map_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="180dp"
+                android:layout_height="90dp"
+                android:background="@drawable/non_edittext"
+                android:stateListAnimator="@null"
+                app:layout_constraintTop_toTopOf="@id/mapback"
+                app:layout_constraintLeft_toLeftOf="@id/mapback"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="63dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/mapicon2"
+                app:layout_constraintTop_toTopOf="@id/mapback"
+                app:layout_constraintLeft_toLeftOf="@id/mapback"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginBottom="5dp"
+                android:text="지도 검색"
+                android:fontFamily="@font/gonglight"
+                app:layout_constraintBottom_toBottomOf="@id/mapback"
+                app:layout_constraintLeft_toLeftOf="@id/mapback"></TextView>
+
+            <TextView
+                android:id="@+id/filterback"
+                android:layout_width="180dp"
+                android:layout_height="90dp"
+                android:background="@drawable/search_r"
+                android:layout_marginTop="275dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="25.5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                ></TextView>
+
+            <Button
+                android:id="@+id/search_filter_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="180dp"
+                android:layout_height="90dp"
+                android:background="@drawable/non_edittext"
+                android:stateListAnimator="@null"
+                app:layout_constraintTop_toTopOf="@+id/filterback"
+                app:layout_constraintRight_toRightOf="@id/filterback"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="63dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/filltericon2"
+                app:layout_constraintTop_toTopOf="@id/filterback"
+                app:layout_constraintRight_toRightOf="@id/filterback"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/gonglight"
+                android:text="필터 검색"
+                app:layout_constraintBottom_toBottomOf="@id/filterback"
+                app:layout_constraintRight_toRightOf="@id/filterback"></TextView>
+
+
+            <Button
+                android:id="@+id/menu_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_menu_black"
+                android:stateListAnimator="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.025"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.025" />
+
+
+
+            <TextView
+                android:id="@+id/con1"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/layout_contour"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/liny1"
+                />
+
+            <TextView
+                android:id="@+id/news"
+                android:layout_width="23dp"
+                android:layout_height="26dp"
+                android:background="@drawable/news_icon"
+                android:layout_marginTop="11dp"
+                android:layout_marginLeft="3dp"
+                app:layout_constraintTop_toBottomOf="@id/con1"
+                app:layout_constraintLeft_toLeftOf="@id/mapback"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="최신 대구 부동산 뉴스"
+                android:fontFamily="@font/gonglight"
+                android:layout_marginLeft="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                app:layout_constraintLeft_toRightOf="@id/news"
+                app:layout_constraintTop_toBottomOf="@id/con1" />
+
+            <TextView
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/line_drawer"
+                app:layout_constraintTop_toBottomOf="@id/textView3"
+                app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listView_main_list"
+                android:layout_width="353dp"
+                android:layout_height="336dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@android:color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="#ffffff"
+        android:layout_gravity="start">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/drawerlinear"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:background="#eeeeee"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/main_id"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="eqweqwe"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/main_email"
+                            android:textSize="18sp"
+                            android:text="qqqqqq@asdasd"
+                            android:textColor="#000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/ic_heart_off"></TextView>
+                        <Button
+                            android:id="@+id/my_apt"
+                            android:layout_width="220dp"
+                            android:layout_height="70dp"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/spoqabold"
+                            android:background="@drawable/non_edittext"
+                            android:layout_centerHorizontal="true"
+                            android:stateListAnimator="@null"
+                            android:text="     관심 아파트"
+                            android:gravity="center_vertical"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/line_drawer"></TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/rank"></TextView>
+                        <Button
+                            android:id="@+id/apt_rank"
+                            android:layout_width="220dp"
+                            android:layout_height="70dp"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/spoqabold"
+                            android:background="@drawable/non_edittext"
+                            android:layout_centerHorizontal="true"
+                            android:stateListAnimator="@null"
+                            android:text="     아파트 랭킹"
+                            android:gravity="center_vertical"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/line_drawer"></TextView>
+
+                    <TextView
+                        android:layout_marginTop="420dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="@drawable/line_drawer"></TextView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="18dp">
+                        <Button
+                            android:id="@+id/my_page"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:stateListAnimator="@null"
+                            android:background="@drawable/mypage_gray"></Button>
+                        <Button
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/logout"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:stateListAnimator="@null"
+                            android:background="@drawable/logout_gray"></Button></LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageButton
+                android:id="@+id/btn_CloseDrawer"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/non_edittext">
+            </ImageButton>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

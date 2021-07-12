@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.techtown.apt_1025">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".KActivity.ApartListActivity"></activity>
+        <activity android:name=".KActivity.DetailInfoActivity" />
+        <activity android:name=".KActivity.SearchApartActivity" />
+        <activity android:name=".KActivity.RankingActivity" />
+        <activity android:name=".IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".KActivity.SearchMapActivity" />
+        <activity android:name=".MyApart.MyApartActivity"></activity>
+        <activity android:name=".MyApart.AreaActivity"></activity>
+        <activity android:name=".MyApart.PredictActivity"></activity>
+        <activity android:name=".MyApart.CheckBoxActivity"></activity>
+        <activity android:name=".MyApart.CompareActivity"></activity>
+        <activity android:name=".Login.RegisterActivity" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name=".Login.FindModifyActivity" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+        <activity android:name=".MainScreen.MainScreenClass"></activity>
+        <activity android:name=".MainScreen.ResultActivity"></activity>
+        <activity android:name=".MainScreen.drawActivity">
+        </activity>
+        <activity android:name=".MainScreen.MenuActivity"></activity>
+        <activity android:name=".MainScreen.MypageActivity" />
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="w7nzm4duxw"/>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

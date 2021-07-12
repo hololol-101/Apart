@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='apt_1025'

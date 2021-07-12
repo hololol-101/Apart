@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/title_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/mainicon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/maintitle"/>
+
+    <TextView
+        android:id="@+id/maintitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="대구 아파트"
+        android:textSize="40dp"
+        android:fontFamily="@font/gongbold"
+        android:layout_marginBottom="30dp"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/login_id"
+        />
+
+
+    <Button
+        android:id="@+id/login_button"
+        style="@style/defaultButton"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:text="로그인"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/join_button"
+        app:layout_constraintRight_toRightOf="@+id/login_id"
+        app:layout_constraintLeft_toLeftOf="@id/login_id"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+
+    <EditText
+        android:id="@+id/login_id"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="textNoSuggestions"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/login_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintRight_toRightOf="@+id/login_id"
+        app:layout_constraintLeft_toLeftOf="@id/login_id" />
+
+
+    <Button
+        android:id="@+id/join_button"
+        style="@style/defaultButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="196dp"
+        android:text="회원가입"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/find_button"
+        app:layout_constraintBottom_toTopOf="@id/login_button"
+        app:layout_constraintEnd_toStartOf="@id/find_button"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@id/login_id" />
+
+    <Button
+        android:id="@+id/find_button"
+        style="@style/defaultButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="150dp"
+        android:text="ID/PW찾기"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/login_id"
+        app:layout_constraintStart_toEndOf="@id/join_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

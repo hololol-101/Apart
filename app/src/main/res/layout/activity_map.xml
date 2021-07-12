@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="604dp"
+        android:layout_height="67dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002" />
+
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_detail_apart_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아파트 검색"
+            android:fontFamily="@font/tmon"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/map_back"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="45dp"
+        android:layout_height="67dp"
+        android:background="@drawable/ic_backspace"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:fontFamily="@font/spoqabold"
+        android:background="@drawable/search_icon"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/search_button"
+        style="@style/defaultButton"
+        android:layout_width="70dp"
+        android:layout_height="67dp"
+        android:background="@drawable/non_edittext"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@id/textview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textvieww2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/line_drawer"
+        app:layout_constraintTop_toBottomOf="@id/textview"></TextView>
+
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    sothree:layout_constraintTop_toBottomOf="@+id/textvieww2"
+    sothree:umanoPanelHeight="0dp"
+    sothree:umanoShadowHeight="4dp">
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="10">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="대구광역시"
+                    android:layout_weight="6"
+                    android:background="@drawable/select_bar"
+                    android:id="@+id/sibtn" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:text="구/군"
+                    android:background="@drawable/select_bar"
+                    android:id="@+id/gubtn" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:background="@drawable/select_bar"
+                    android:text="동"
+                    android:id="@+id/dongbtn" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/line_drawer"></TextView>
+
+            <com.naver.maps.map.MapView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+            <!-- 슬라이드 레이어 부분 -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:textSize = "22sp"
+            />
+            <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:visibility="visible"
+            android:gravity="center|top" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/buttontest1"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button1"/>
+                    <Button
+                        android:id="@+id/buttontest2"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button2"/>
+                    <Button
+                        android:id="@+id/buttontest3"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button3"/>
+                    <Button
+                        android:id="@+id/buttontest4"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button3"/>
+                    <Button
+                        android:id="@+id/buttontest5"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button3"/>
+                    <Button
+                        android:id="@+id/buttontest6"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button3"/>
+                    <Button
+                        android:id="@+id/buttontest7"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button3"/>
+                    <Button
+                        android:id="@+id/buttontest8"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button3"/>
+                    <Button
+                        android:id="@+id/buttontest9"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:textSize = "20sp"
+                        android:background="@drawable/line_edittext"
+                        android:text="button3"/>
+                    <Button
+                        android:id="@+id/for_space"
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:background="@drawable/non_edittext"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
